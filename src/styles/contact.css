@@ -1,0 +1,232 @@
+/* ================= PAGE ================= */
+.contact-page {
+  padding: 90px 40px;
+  background: #f6f7fb;
+}
+
+/* ================= HEADER ================= */
+.contact-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.contact-header h1 {
+  font-size: 32px;
+}
+
+.contact-header p {
+  color: #666;
+}
+
+/* ================= GLASS EFFECT ================= */
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  border: 1px solid #eee;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* ================= MAIN LAYOUT ================= */
+.contact-container {
+  display: flex;
+  gap: 25px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* ================= LEFT INFO ================= */
+.contact-info {
+  flex: 1;
+  padding: 25px;
+}
+
+.contact-info h2 {
+  margin-bottom: 15px;
+}
+
+.info-box p {
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+.info-text {
+  margin-top: 15px;
+  color: #666;
+  font-size: 14px;
+}
+
+/* ================= RIGHT FORM ================= */
+.contact-form {
+  flex: 1;
+  padding: 25px;
+}
+
+.contact-form h2 {
+  margin-bottom: 15px;
+}
+
+/* ================= INPUTS ================= */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+  font-family: inherit;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #4f46e5;
+}
+
+/* ================= BUTTON ================= */
+.contact-form button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background: #4f46e5;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.contact-form button:hover {
+  background: #4338ca;
+}
+
+/* ================= MODAL OVERLAY ================= */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  animation: fadeIn 0.3s ease;
+}
+
+/* ================= LIGHT MODAL ================= */
+.modal-box {
+  background: #ffffff;
+  padding: 30px 40px;
+  border-radius: 16px;
+  text-align: center;
+  width: 320px;
+  animation: pop 0.4s ease;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+  color: #111;
+}
+
+.modal-box .check {
+  font-size: 40px;
+  color: #22c55e;
+  margin-bottom: 10px;
+}
+
+.modal-box h2 {
+  margin-bottom: 5px;
+}
+
+.modal-box p {
+  color: #555;
+  font-size: 14px;
+}
+
+/* ================= DARK MODAL ================= */
+body.dark .modal-box {
+  background: linear-gradient(135deg, #0f172a, #111827);
+  color: #fff;
+  border: 1px solid rgba(255, 140, 0, 0.3);
+  box-shadow: 0 0 25px rgba(255, 140, 0, 0.35);
+}
+
+body.dark .modal-box .check {
+  color: #ff8c00;
+  text-shadow: 0 0 15px rgba(255, 140, 0, 0.8);
+}
+
+body.dark .modal-box p {
+  color: #cbd5e1;
+}
+
+/* ================= ANIMATIONS ================= */
+@keyframes pop {
+  from {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* ================= MOBILE RESPONSIVE ================= */
+@media (max-width: 768px) {
+
+  .contact-container {
+    flex-direction: column;
+    padding: 15px;
+    gap: 20px;
+  }
+
+  .contact-header h1 {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .contact-header p {
+    font-size: 13px;
+    text-align: center;
+  }
+
+  .contact-info,
+  .contact-form {
+    width: 100%;
+    padding: 18px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .contact-form button {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .modal-box {
+    width: 90%;
+    padding: 20px;
+    border-radius: 14px;
+  }
+
+  .modal-box h2 {
+    font-size: 18px;
+  }
+
+  .modal-box p {
+    font-size: 13px;
+  }
+
+  .modal-box .check {
+    font-size: 34px;
+  }
+}

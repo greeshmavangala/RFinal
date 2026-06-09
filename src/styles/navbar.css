@@ -1,0 +1,167 @@
+/* NAVBAR BASE */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 12px 25px;
+
+  background: rgba(255,255,255,0.75);
+  backdrop-filter: blur(14px);
+
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+
+  z-index: 1000;
+
+  transition: 0.3s ease;
+}
+
+/* HIDE ON SCROLL */
+.navbar.hide {
+  transform: translateY(-100%);
+}
+
+/* LEFT */
+.nav-left {
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding-left: 50px;
+  color:rgb(247, 104, 38)
+}
+
+/* CENTER */
+.nav-center {
+  position: relative;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-search {
+  width: 60%;
+  padding: 10px 14px;
+
+  border: 1px solid #ddd;
+  border-radius: 30px;
+
+  outline: none;
+
+  transition: 0.3s ease;
+}
+
+.nav-search:focus {
+  width: 75%;
+  border-color: #4f46e5;
+}
+
+/* SEARCH DROPDOWN */
+.search-suggestions {
+  position: absolute;
+  top: 45px;
+
+  width: 60%;
+  padding: 10px;
+
+  border-radius: 12px;
+
+  cursor: pointer;
+}
+
+/* RIGHT */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* CART */
+.cart-badge {
+  position: relative;
+  cursor: pointer;
+
+  font-size: 18px;
+}
+
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+
+  background: #ff4d4d;
+  color: white;
+
+  font-size: 11px;
+
+  width: 18px;
+  height: 18px;
+
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* PROFILE */
+.profile {
+  position: relative;
+}
+
+.profile button {
+  background: none;
+  border: none;
+
+  font-size: 20px;
+
+  cursor: pointer;
+}
+
+/* DROPDOWN */
+.dropdown {
+  position: absolute;
+  right: 0;
+  top: 35px;
+
+  width: 150px;
+
+  padding: 10px;
+
+  border-radius: 12px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  animation: fadeIn 0.2s ease;
+}
+
+.dropdown p {
+  padding: 6px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.dropdown p:hover {
+  background: rgba(0,0,0,0.05);
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

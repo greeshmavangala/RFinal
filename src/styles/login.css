@@ -1,0 +1,354 @@
+
+/* ================= GLOBAL RESET ================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* ================= MAIN WRAPPER ================= */
+.auth-page {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: stretch;
+}
+
+/* ================= LEFT SIDE ================= */
+.auth-left {
+  flex: 1;
+  height: 100vh;
+
+  background: linear-gradient(135deg, #ff6b6b, #ffb347);
+
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 0 80px;
+}
+
+/* BRAND */
+.brand {
+  font-size: 22px;
+  font-weight: bold;
+  opacity: 0.9;
+  margin-bottom: 15px;
+}
+
+/* TITLE */
+.auth-left h1 {
+  font-size: 44px;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+
+/* DESCRIPTION */
+.auth-left p {
+  font-size: 16px;
+  opacity: 0.9;
+  margin-bottom: 20px;
+}
+
+/* FEATURES */
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.features div {
+  background: rgba(255,255,255,0.15);
+  padding: 12px 16px;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+/* QUOTE */
+.quote {
+  font-style: italic;
+  font-size: 14px;
+  opacity: 0.9;
+  margin-top: 15px;
+}
+
+/* ================= RIGHT SIDE ================= */
+.auth-right {
+  flex: 1;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: #f6f7fb;
+}
+
+/* ================= LOGIN CARD ================= */
+.auth-card {
+  width: 420px;
+  max-width: 90%;
+
+  background: white;
+  padding: 45px;
+
+  border-radius: 18px;
+
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+/* TITLE */
+.auth-card h2 {
+  font-size: 24px;
+  margin-bottom: 6px;
+}
+
+/* SUB TEXT */
+.sub {
+  color: gray;
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+
+/* INPUTS */
+.auth-card input {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 14px;
+
+  border: 1px solid #ddd;
+  border-radius: 10px;
+
+  font-size: 14px;
+  outline: none;
+}
+
+/* BUTTON */
+.auth-card button {
+  width: 100%;
+  padding: 14px;
+
+  background: #ff6b6b;
+  color: white;
+
+  border: none;
+  border-radius: 10px;
+
+  font-weight: bold;
+  font-size: 15px;
+
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.auth-card button:hover {
+  background: #ff5252;
+}
+
+/* SWITCH */
+.switch {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 13px;
+}
+
+.switch a {
+  color: #ff6b6b;
+  text-decoration: none;
+}
+.auth-page {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ================= GLOBAL SMOOTH ================= */
+.auth-page,
+.auth-left,
+.auth-right,
+.auth-card {
+  transition: all 0.4s ease;
+}
+
+/* ================= LEFT SIDE ANIMATION ================= */
+.auth-left {
+  animation: slideLeft 0.8s ease;
+}
+
+@keyframes slideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ================= LOGIN CARD ANIMATION ================= */
+.auth-card {
+  animation: popIn 0.6s ease;
+}
+
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* ================= INPUT FOCUS ANIMATION ================= */
+.auth-card input {
+  transition: 0.3s ease;
+}
+
+.auth-card input:focus {
+  transform: scale(1.02);
+  border-color: #ff6b6b;
+  box-shadow: 0 0 10px rgba(255, 107, 107, 0.3);
+}
+
+/* ================= BUTTON ANIMATION ================= */
+.auth-card button {
+  position: relative;
+  overflow: hidden;
+}
+
+/* hover lift */
+.auth-card button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 107, 107, 0.3);
+}
+
+/* ripple effect */
+.auth-card button::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: -100%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: skewX(-20deg);
+}
+
+.auth-card button:hover::after {
+  animation: shine 0.6s ease;
+}
+
+@keyframes shine {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/* ================= FEATURES ANIMATION ================= */
+.features div {
+  transition: 0.3s ease;
+}
+
+.features div:hover {
+  transform: translateX(5px);
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* ================= PAGE FADE IN ================= */
+.auth-page {
+  animation: fadePage 0.5s ease;
+}
+
+@keyframes fadePage {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ================= MOBILE RESPONSIVE ================= */
+@media (max-width: 768px) {
+
+  /* STACK LAYOUT */
+  .auth-page {
+    flex-direction: column;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  /* LEFT SIDE BECOMES TOP SECTION */
+  .auth-left {
+    flex: none;
+    width: 100%;
+    height: auto;
+    padding: 40px 25px;
+    text-align: center;
+  }
+
+  .auth-left h1 {
+    font-size: 28px;
+  }
+
+  .auth-left p {
+    font-size: 14px;
+  }
+
+  .features {
+    align-items: center;
+  }
+
+  .features div {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  /* RIGHT SIDE */
+  .auth-right {
+    flex: none;
+    width: 100%;
+    height: auto;
+    padding: 30px 15px;
+  }
+
+  /* LOGIN CARD */
+  .auth-card {
+    width: 100%;
+    max-width: 350px;
+    padding: 30px;
+  }
+
+  .auth-card h2 {
+    font-size: 20px;
+  }
+
+  .auth-card input {
+    padding: 12px;
+  }
+
+  .auth-card button {
+    padding: 12px;
+  }
+}

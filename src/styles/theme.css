@@ -1,0 +1,111 @@
+/* =========================
+   LIGHT MODE
+========================= */
+.light {
+  background: #f5f7fb;
+  color: #111;
+  transition: all 0.3s ease;
+}
+
+/* =========================
+   DARK MODE
+========================= */
+.dark {
+  background: #0f0f0f;
+  color: #f5f5f5;
+  transition: all 0.3s ease;
+}
+
+/* FORCE TEXT VISIBILITY */
+.dark h1,
+.dark h2,
+.dark h3,
+.dark p,
+.dark span,
+.dark a {
+  color: #f5f5f5 !important;
+}
+
+/* =========================
+   GLASS CARD FIX
+========================= */
+.glass {
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(20px);
+  border-radius: 18px;
+  transition: 0.3s ease;
+}
+
+.dark .glass {
+  background: rgba(30, 30, 30, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* =========================
+   INPUTS
+========================= */
+input,
+textarea,
+select {
+  transition: 0.3s ease;
+}
+
+.dark input,
+.dark textarea,
+.dark select {
+  background: #1e1e1e;
+  color: #fff;
+  border: 1px solid #333;
+}
+
+.dark input::placeholder {
+  color: #aaa;
+}
+
+/* =========================
+   CARDS (ALL SECTIONS)
+========================= */
+.dark .restaurant-card,
+.dark .cart-card,
+.dark .menu-card,
+.dark .checkout-container,
+.dark .order-summary,
+.dark .price-box {
+  background: rgba(30, 30, 30, 0.7);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* =========================
+   BUTTONS
+========================= */
+.btn-primary {
+  background: linear-gradient(135deg, #ff4d4d, #ff7a7a);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: scale(1.05);
+}
+
+/* =========================
+   THEME TOGGLE BUTTON
+========================= */
+.theme-toggle-btn {
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+
+  background: rgba(0,0,0,0.1);
+}
+
+.dark .theme-toggle-btn {
+  background: rgba(255,255,255,0.1);
+  color: white;
+}

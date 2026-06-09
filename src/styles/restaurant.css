@@ -1,0 +1,405 @@
+/* =========================
+   PAGE BACKGROUND
+========================= */
+
+.restaurants-page {
+  padding: 90px 30px;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fb, #eef1f7);
+  animation: pageIn 0.6s ease;
+}
+
+body.dark .restaurants-page {
+  background: #0b1220;
+}
+
+/* =========================
+   GLASS EFFECT
+========================= */
+
+.glass {
+  background: rgba(255,255,255,0.55);
+  backdrop-filter: blur(20px);
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+body.dark .glass {
+  background: rgba(17, 24, 39, 0.75);
+  color: #e5e7eb;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.restaurants-hero {
+  padding: 25px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.restaurants-hero h1 {
+  font-size: 28px;
+  margin-bottom: 5px;
+}
+
+.restaurants-hero p {
+  color: #666;
+}
+
+body.dark .restaurants-hero h1,
+body.dark .restaurants-hero p {
+  color: #e5e7eb;
+}
+
+/* =========================
+   STATS
+========================= */
+
+.hero-stats {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin: 20px 0;
+}
+
+.hero-stats h3 {
+  margin: 0;
+  color: #ff4d4d;
+}
+
+/* =========================
+   SEARCH
+========================= */
+
+.search-box {
+  width: 320px;
+  padding: 12px 15px;
+  border-radius: 30px;
+  border: 1px solid rgba(0,0,0,0.1);
+  outline: none;
+  transition: 0.3s ease;
+}
+
+.search-box:focus {
+  width: 400px;
+  box-shadow: 0 0 15px rgba(255, 77, 77, 0.3);
+}
+
+body.dark .search-box {
+  background: #1e293b;
+  color: #e5e7eb;
+  border: 1px solid #334155;
+}
+
+/* =========================
+   GRID FIX (IMPORTANT)
+========================= */
+
+.restaurant-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 22px;
+  align-items: stretch;
+}
+
+/* =========================
+   CARD FIX
+========================= */
+
+.restaurant-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 16px;
+  overflow: hidden;
+  background: white;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.restaurant-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+body.dark .restaurant-card {
+  background: #111827;
+}
+
+/* =========================
+   IMAGE FIX
+========================= */
+
+.image-wrapper {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.restaurant-card:hover .image-wrapper img {
+  transform: scale(1.08);
+}
+
+/* =========================
+   BADGES
+========================= */
+
+.badges {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.rating,
+.time {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  color: white;
+}
+
+.rating {
+  background: rgba(0,0,0,0.6);
+}
+
+.time {
+  background: rgba(255,77,77,0.9);
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.card-content {
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.card-content h3 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.card-content p {
+  font-size: 13px;
+  color: #666;
+}
+
+body.dark .card-content p {
+  color: #cbd5e1;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.view-btn {
+  margin-top: auto;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #ff4d4d, #ff7a7a);
+  color: white;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.view-btn::after {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 100%;
+  top: 0;
+  left: -120%;
+  background: rgba(255,255,255,0.25);
+  transform: skewX(-20deg);
+}
+
+.view-btn:hover::after {
+  animation: shine 0.6s ease;
+}
+
+@keyframes shine {
+  0% { left: -120%; }
+  100% { left: 120%; }
+}
+
+/* =========================
+   DETAILS PAGE
+========================= */
+
+.details-page {
+  padding: 90px 40px;
+  min-height: 100vh;
+  background: #f6f7fb;
+}
+
+body.dark .details-page {
+  background: #0b1220;
+}
+
+/* HERO */
+.details-hero {
+  display: flex;
+  gap: 25px;
+  padding: 20px;
+  margin-bottom: 30px;
+  align-items: center;
+  background: white;
+  border-radius: 16px;
+}
+
+body.dark .details-hero {
+  background: #111827;
+}
+
+/* IMAGE */
+.hero-img img {
+  width: 260px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+/* =========================
+   MENU GRID
+========================= */
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 18px;
+}
+
+.menu-card {
+  display: flex;
+  gap: 12px;
+  padding: 15px;
+  border-radius: 14px;
+  background: white;
+  transition: 0.3s ease;
+}
+
+.menu-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+}
+
+body.dark .menu-card {
+  background: #111827;
+}
+
+/* MENU IMAGE */
+.menu-img img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* =========================
+   MOBILE FIX (FINAL)
+========================= */
+
+@media (max-width: 768px) {
+
+  .restaurants-page,
+  .details-page {
+    padding: 80px 15px;
+  }
+
+  .hero-stats {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .restaurant-grid,
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .details-hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .image-wrapper {
+    height: 150px;
+  }
+
+  .hero-img img {
+    width: 100%;
+    height: 220px;
+  }
+
+  .menu-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .menu-img img {
+    width: 100%;
+    height: 180px;
+  }
+
+  .menu-bottom button {
+    width: 100%;
+  }
+
+  .search-box {
+    width: 100%;
+  }
+
+  .search-box:focus {
+    width: 100%;
+  }
+}
+
+
+/* ================= PAGE ANIMATION ================= */
+
+@keyframes pageIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.typing-heading {
+  font-size: 28px;
+  margin-bottom: 5px;
+  font-weight: 700;
+
+  background: linear-gradient(90deg, #ff4d4d, #ffb84d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.cursor {
+  color: #ff4d4d;
+  font-weight: bold;
+  animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}

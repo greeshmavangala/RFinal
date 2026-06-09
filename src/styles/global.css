@@ -1,0 +1,410 @@
+/* =========================
+   RESET
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+/* =========================
+   BODY THEME
+========================= */
+body {
+  background: #f6f7fb;
+  color: #111;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+body.dark {
+  background: #0f172a !important;
+  color: #f1f5f9 !important;
+}
+
+/* =========================
+   APP LAYOUT
+========================= */
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-layout {
+  margin-top: 0;
+}
+
+.page-content {
+  flex: 1;
+  padding: 20px 30px;
+  min-height: calc(100vh - 70px);
+}
+
+/* =========================
+   PAGE BACKGROUNDS
+========================= */
+.cart-page,
+.restaurants-page,
+.details-page,
+.checkout-page,
+.auth-container {
+  min-height: 100vh;
+  padding: 20px;
+  background: #f6f7fb;
+}
+
+body.dark .cart-page,
+body.dark .restaurants-page,
+body.dark .details-page,
+body.dark .checkout-page,
+body.dark .auth-container {
+  background: #0f172a !important;
+}
+
+/* =========================
+   GLASS
+========================= */
+.glass {
+  backdrop-filter: blur(12px);
+  border-radius: 14px;
+}
+
+body:not(.dark) .glass {
+  background: rgba(255, 255, 255, 0.75);
+  color: #111;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+
+body.dark .glass {
+  background: rgba(30, 41, 59, 0.75);
+  color: #f1f5f9;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* =========================
+   TEXT FIX
+========================= */
+body.dark h1,
+body.dark h2,
+body.dark h3,
+body.dark h4,
+body.dark h5,
+body.dark h6 {
+  color: #ffffff !important;
+}
+
+body.dark p,
+body.dark span,
+body.dark small,
+body.dark li {
+  color: #cbd5e1 !important;
+}
+
+/* =========================
+   INPUTS
+========================= */
+input,
+textarea {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background: #fff;
+  color: #111;
+  outline: none;
+}
+
+body.dark input,
+body.dark textarea {
+  background: #1e293b;
+  color: #f1f5f9;
+  border: 1px solid #334155;
+}
+
+body.dark input::placeholder {
+  color: #94a3b8;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+button {
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 10px 14px;
+  border: none;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #ff4d4d, #ff7a7a);
+  color: white ;
+  font-weight: 600;
+}
+
+/* =========================
+   CARDS
+========================= */
+.card,
+.menu-card,
+.profile-card,
+.order-card,
+.restaurant-card,
+.cart-card {
+  border-radius: 14px;
+}
+
+body:not(.dark) .card,
+body:not(.dark) .menu-card,
+body:not(.dark) .profile-card,
+body:not(.dark) .order-card,
+body:not(.dark) .restaurant-card,
+body:not(.dark) .cart-card {
+  background: #ffffff;
+  color: #111;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+body.dark .navbar {
+  background: #0f172a !important;
+  color: #f1f5f9;
+}
+
+body.dark .navbar * {
+  color: #f1f5f9 !important;
+}
+
+body.dark .nav-search {
+  background: #1e293b !important;
+  color: #f1f5f9 !important;
+  border: 1px solid #334155 !important;
+}
+
+body.dark .nav-search::placeholder {
+  color: #94a3b8;
+}
+
+body.dark .dropdown {
+  background: #1e293b !important;
+  border: 1px solid #334155 !important;
+}
+
+body.dark .dropdown p {
+  color: #e5e7eb !important;
+}
+
+body.dark .dropdown p:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* =========================
+   SIDEBAR (FINAL CLEAN FIX)
+========================= */
+.sidebar {
+  transition: 0.3s ease;
+  background: #ffffff;
+  color: #111;
+}
+
+body.dark .sidebar {
+  background: #0f172a !important;
+  border-right: 1px solid #1e293b;
+}
+
+/* SIDEBAR ITEMS */
+.sidebar a,
+.sidebar p,
+.sidebar li {
+  display: block;
+  padding: 10px 14px;
+  margin: 6px 10px;
+  border-radius: 10px;
+  color: inherit;
+  transition: 0.25s ease;
+}
+
+/* DARK MODE ITEMS */
+body.dark .sidebar a,
+body.dark .sidebar p,
+body.dark .sidebar li {
+  color: #cbd5e1 !important;
+}
+
+/* HOVER */
+body.dark .sidebar a:hover,
+body.dark .sidebar p:hover,
+body.dark .sidebar li:hover {
+  background: rgba(255, 255, 255, 0.06);
+  color: #ffffff !important;
+  transform: translateX(4px);
+}
+
+/* ACTIVE */
+body.dark .sidebar .active {
+  background: #1e293b;
+  color: #ffffff ;
+  font-weight: 600;
+}
+
+/* =========================
+   SCROLLBAR
+========================= */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c86767;
+  border-radius: 10px;
+}
+
+body.dark ::-webkit-scrollbar-thumb {
+  background: #2b3542;
+}
+
+/* =========================
+   ANIMATION
+========================= */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================
+   GLOBAL FULL DARK MODE ENGINE
+========================= */
+
+/* FORCE ROOT BACKGROUND */
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  background: #f6f7fb;
+  color: #111;
+
+}
+
+/* DARK MODE GLOBAL OVERRIDE */
+body.dark {
+  background: #0b1220 !important;
+  color: #e5e7eb !important;
+  
+}
+
+/* FORCE EVERYTHING TO INHERIT THEME */
+body.dark * {
+  border-color: rgba(255,255,255,0.08);
+  
+
+}
+
+/* REMOVE WHITE BACKGROUNDS FROM ANY DIV NOT STYLED */
+body.dark div {
+  background-color: transparent;
+  
+}
+
+/* MAIN APP WRAPPERS */
+body.dark .app-container,
+body.dark .main-layout,
+body.dark .page-content {
+  background: #0c1320 ;
+  
+
+}
+
+/* FORCE ANY UNSTYLED SECTIONS */
+body.dark section,
+body.dark main,
+body.dark header,
+body.dark footer {
+  background: transparent !important;
+    box-shadow: 0 10px 30px rgba(167, 84, 84, 0.877);
+
+}
+
+
+
+
+/* FIX ANY STRAY WHITE BLOCKS */
+body.dark .container,
+body.dark .wrapper {
+  background: transparent !important;
+  
+}
+
+/* TEXT SAFETY */
+body.dark h1,
+body.dark h2,
+body.dark h3,
+body.dark p,
+body.dark span,
+body.dark li {
+  color: #e5e7eb !important;
+}
+
+/* INPUTS */
+body.dark input,
+body.dark textarea {
+  background: #1e293b !important;
+  color: #f1f5f9 !important;
+  border: 1px solid #334155 !important;
+}
+
+/* BUTTON DEFAULT CLEAN */
+body.dark button {
+  background: #ee6b37;
+  color: #e5e7eb;
+
+
+}
+
+/* FORCE ANY WHITE CARDS (GLOBAL SAFETY NET) */
+body.dark .card,
+body.dark .glass,
+body.dark .menu-card,
+body.dark .restaurant-card,
+body.dark .cart-card,
+body.dark .order-card,
+body.dark .profile-card {
+  background: #111827 !important;
+  color: #e5e7eb !important;
+    box-shadow: 0 10px 30px rgba(180, 86, 86, 0.856);
+
+}
+
+/* NAV + SIDEBAR UNIFIED DARK */
+body.dark .navbar,
+body.dark .sidebar {
+  background: #0b1220 !important;
+   box-shadow: 0 10px 30px rgba(180, 86, 86, 0.856);
+  
+}
+
+/* REMOVE ANY WHITE FLASH AREAS */
+body.dark *::before,
+body.dark *::after {
+  background: transparent;
+  
+}
+
+.restaurants-page,
+.home,
+.details-page{
+    padding-top: 90px;
+
+}
+
+ 

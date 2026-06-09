@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #f8f9ff, #f1f5ff);
+}
+
+/* GLASS CARD BASE */
+.glass {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 16px;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* BUTTON PREMIUM */
+.btn-primary {
+  background: linear-gradient(135deg, #ff4d4d, #ff7a7a);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(255,77,77,0.3);
+}
