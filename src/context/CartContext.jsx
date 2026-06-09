@@ -22,11 +22,6 @@ export const CartProvider = ({ children }) => {
     });
   };
 
-  // ➜ THIS IS THE FIX YOU NEED
-  const clearCart = () => {
-    setCart([]);
-  };
-
   // INCREASE QTY
   const increaseQty = (id) => {
     setCart((prev) =>
@@ -51,12 +46,25 @@ export const CartProvider = ({ children }) => {
     );
   };
 
+  // ✅ REMOVE FROM CART (FIX)
+  const removeFromCart = (id) => {
+    setCart((prev) =>
+      prev.filter((item) => String(item.id) !== String(id))
+    );
+  };
+
+  // CLEAR CART
+  const clearCart = () => {
+    setCart([]);
+  };
+
   return (
     <CartContext.Provider
       value={{
         cart,
         addToCart,
-        clearCart, // ✅ VERY IMPORTANT
+        removeFromCart,   // ✅ ADD THIS
+        clearCart,
         increaseQty,
         decreaseQty,
       }}

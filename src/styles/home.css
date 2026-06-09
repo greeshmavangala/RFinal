@@ -24,6 +24,10 @@
   position: relative;
   overflow: hidden;
 }
+.features{
+  border-radius: 30px;
+
+}
 
 /* soft glowing background effect */
 .hero::before {

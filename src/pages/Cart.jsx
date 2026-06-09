@@ -25,7 +25,7 @@ export default function Cart() {
 
       {cart.length === 0 ? (
         <div className="empty-cart glass">
-          <h3>Your cart is empty 😔</h3>
+          <h3>Your cart is empty!!</h3>
           <button onClick={() => navigate("/restaurants")}>
             Explore Restaurants
           </button>
@@ -67,14 +67,10 @@ export default function Cart() {
           </div>
 
           <div className="cart-summary glass">
-
             <h3>Total: ₹ {total}</h3>
 
             <div className="cart-actions">
-              <button
-                className="btn-secondary"
-                onClick={clearCart}
-              >
+              <button className="btn-secondary" onClick={clearCart}>
                 Clear Cart
               </button>
 
@@ -85,7 +81,6 @@ export default function Cart() {
                 Checkout
               </button>
             </div>
-
           </div>
         </>
       )}

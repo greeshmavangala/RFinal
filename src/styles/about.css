@@ -85,7 +85,7 @@
 
 .about-stats h2 {
   margin: 0;
-  color: #4f46e5;
+  color: #0d9a20;
 }
 
 /* =========================
@@ -107,7 +107,7 @@
 
   border: none;
 
-  background: #4f46e5;
+  background: #f49314;
   color: white;
 
   border-radius: 10px;
@@ -118,7 +118,7 @@
 }
 
 .about-cta button:hover {
-  background: #4338ca;
+  background: #ca6138;
 }
 body.dark .about-hero  {
   border-radius: 20px;

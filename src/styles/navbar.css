@@ -1,4 +1,6 @@
-/* NAVBAR BASE */
+/* =========================
+   NAVBAR BASE
+========================= */
 .navbar {
   position: fixed;
   top: 0;
@@ -11,13 +13,12 @@
 
   padding: 12px 25px;
 
-  background: rgba(255,255,255,0.75);
+  background: rgba(255, 255, 255, 0.75);
   backdrop-filter: blur(14px);
 
-  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
 
   z-index: 1000;
-
   transition: 0.3s ease;
 }
 
@@ -26,19 +27,25 @@
   transform: translateY(-100%);
 }
 
-/* LEFT */
+/* =========================
+   LEFT
+========================= */
 .nav-left {
   font-size: 20px;
   font-weight: bold;
   cursor: pointer;
+
   display: flex;
   align-items: center;
   gap: 6px;
+
   padding-left: 50px;
-  color:rgb(247, 104, 38)
+  color: rgb(247, 104, 38);
 }
 
-/* CENTER */
+/* =========================
+   CENTER
+========================= */
 .nav-center {
   position: relative;
   flex: 1;
@@ -54,7 +61,6 @@
   border-radius: 30px;
 
   outline: none;
-
   transition: 0.3s ease;
 }
 
@@ -76,7 +82,9 @@
   cursor: pointer;
 }
 
-/* RIGHT */
+/* =========================
+   RIGHT
+========================= */
 .nav-right {
   display: flex;
   align-items: center;
@@ -87,7 +95,6 @@
 .cart-badge {
   position: relative;
   cursor: pointer;
-
   font-size: 18px;
 }
 
@@ -111,7 +118,9 @@
   align-items: center;
 }
 
-/* PROFILE */
+/* =========================
+   PROFILE
+========================= */
 .profile {
   position: relative;
 }
@@ -125,14 +134,15 @@
   cursor: pointer;
 }
 
-/* DROPDOWN */
+/* =========================
+   DROPDOWN
+========================= */
 .dropdown {
   position: absolute;
   right: 0;
   top: 35px;
 
   width: 150px;
-
   padding: 10px;
 
   border-radius: 12px;
@@ -151,10 +161,12 @@
 }
 
 .dropdown p:hover {
-  background: rgba(0,0,0,0.05);
+  background: rgba(0, 0, 0, 0.05);
 }
 
-/* ANIMATION */
+/* =========================
+   ANIMATION
+========================= */
 @keyframes fadeIn {
   from {
     opacity: 0;

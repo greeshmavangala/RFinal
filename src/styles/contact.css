@@ -80,7 +80,7 @@
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-  border-color: #4f46e5;
+  border-color: #e58346;
 }
 
 /* ================= BUTTON ================= */
@@ -88,7 +88,7 @@
   width: 100%;
   padding: 12px;
   border: none;
-  background: #4f46e5;
+  background: #e57f36;
   color: white;
   border-radius: 8px;
   cursor: pointer;
@@ -96,7 +96,7 @@
 }
 
 .contact-form button:hover {
-  background: #4338ca;
+  background: #e18020;
 }
 
 /* ================= MODAL OVERLAY ================= */

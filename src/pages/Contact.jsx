@@ -43,8 +43,8 @@ export default function Contact() {
 
           <div className="info-box">
             <p>📍 Hyderabad, India</p>
-            <p>📧 support@foodiehub.com</p>
-            <p>📞 +91 98765 43210</p>
+            <p>📧 support@bytebitehub.com</p>
+            <p>📞 +91 9014546085</p>
           </div>
 
           <div className="info-text">
@@ -65,6 +65,7 @@ export default function Contact() {
             <input
               type="text"
               placeholder="Your Name"
+              required
               value={form.name}
               onChange={(e) =>
                 setForm({ ...form, name: e.target.value })
@@ -74,6 +75,7 @@ export default function Contact() {
             <input
               type="email"
               placeholder="Your Email"
+              required
               value={form.email}
               onChange={(e) =>
                 setForm({ ...form, email: e.target.value })
@@ -83,6 +85,7 @@ export default function Contact() {
             <textarea
               placeholder="Your Message"
               rows="5"
+              required
               value={form.message}
               onChange={(e) =>
                 setForm({ ...form, message: e.target.value })
@@ -104,7 +107,7 @@ export default function Contact() {
           <div className="modal-box">
             <div className="check">✔</div>
             <h2>Message Sent!</h2>
-            <p>We will contact you soon 🚀</p>
+            <p>We will contact you soon !</p>
           </div>
         </div>
       )}
