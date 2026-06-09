@@ -31,7 +31,7 @@ export default function Signup() {
       <div className="auth-left">
 
         <div className="brand">
-          🍔 FoodieHub
+          ByteBite
         </div>
 
         <h1>
