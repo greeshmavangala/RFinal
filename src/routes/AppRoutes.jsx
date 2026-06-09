@@ -11,7 +11,7 @@ import Orders from "../pages/Orders";
 import Profile from "../pages/Profile";
 import Login from "../pages/Login";
 import Signup from "../pages/Signup";
-import Checkout from "../pages/Checkout";
+import Checkout from "../pages/checkout";
 import Success from "../pages/Success";
 import NotFound from "../pages/NotFound";
 
